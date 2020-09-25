@@ -23,7 +23,7 @@ Go to the [Amazon Rekognition Console](https://console.aws.amazon.com/rekognitio
 3. Type a project name "PowerPlantDetection"
 4. Click `Create Project`
 
-## Create Data Set
+## Create the Dataset
 
 When the Project is created a Dataset with the custom images needs to be created. A Dataset contains images, labels and bounding boxes which will be used to train a model.
 
