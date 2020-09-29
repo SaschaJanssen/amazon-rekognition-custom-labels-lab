@@ -22,9 +22,8 @@ Go to the [Amazon Rekognition Console](https://console.aws.amazon.com/rekognitio
 2. If you see the Amazon Rekognition Custom Labels splash screen, click `Get started`.
 3. Type a project name "PowerPlantDetection".
 4. Click `Create Project`.
-<p align="center">
-  <img src="docs/starting-point.png" alt="Create project" />
-</p>
+
+![Getting Started](docs/starting-point.png "")
 
 ## Create the Dataset
 
@@ -53,9 +52,9 @@ To get more information, click `Labeling tips`.
 ### Add Labels
 
 1. First we create the needed labels. Click `Add` in the label overview box (Filter by labels).  
-<p align="center">
-  <img src="docs/add-labels1.png" alt="Add Labels" />
-</p>
+
+![Add Labels](docs/add-labels1.png "Add Labels")
+
 2. Type in the name of the first label "CoolingTower" and hit `Add label`.
 3. Add a second label "Chimney" and click `Add label`.
 4. Close the dialog with `Save`.
@@ -64,18 +63,17 @@ To get more information, click `Labeling tips`.
 
 1. Select all pictures on the first page.
 2. Click `Draw bounding boxes`.
-<p align="center">
-  <img src="docs/draw-boundingboxes.png" alt="Draw bounding boxes1" />
-</p>
+
+![Draw bounding boxes1](docs/draw-boundingboxes.png "Draw bounding boxes1")
 
 Take a few minutes to read "Tips for Drawing Bounding Boxes" which opens automatically.
 
 3. Select the label you want to mark in the image from the list on the right. The number beside each label is the shortcut to quickly select the label.
 4. Draw a box around the object on the image.
 5. If you want to label a second object, select the appropriate label from the list (or by using the short key) and draw the box around any additional object.
-<p align="center">
-  <img src="docs/draw-boundingboxes2.png" alt="Draw bounding boxes1" />
-</p>
+
+![Draw bounding boxes1](docs/draw-boundingboxes2.png "Draw bounding boxes1")
+
 6. As soon all objects are marked, click `Next` to jump to the next image.
 7. Continue until all objects in all images are labeled, then click `Done` to save everything.
 8. Jump to the next page of images and start over from point 3. until all images are labeled.
@@ -86,29 +84,27 @@ Take a few minutes to read "Tips for Drawing Bounding Boxes" which opens automat
 1. From the main menu on the left choose `Projects`.
 2. Select the created project "PowerPlantDetection".
 2. Click `Train new Model`.
-<p align="center">
-  <img src="docs/train-model1.png" alt="Train Model1" />
-</p>
+
+![Train Model](docs/train-model1.png "Train Model")
+
 3. In the Training Details choose:
     - Choose training dataset: "PowerPlantImages".
     - Select `Split training dataset` from the tiles.
     - Click `Train` to start the training process.
-    <p align="center">
-      <img src="docs/train-model2.png" alt="Train Model2" />
-    </p>
 
+    ![Train Model](docs/train-model2.png "Train Model")
+  
 Back on the project detail page the model will have the status "TRAINING_IN_PROGRESS" until the process has finished.
 
 ## Starting the model
 
-
 1. Go back to the [AWS CloudFormation Console](https://console.aws.amazon.com/cloudformation/home?)
-1. Choose `Stacks` from the menu on the left. Then select the "CustomLabelsDemo" stack from the list.
-1. Select the `Output` tab and click on the link which is listed as the value of `url`.
-1. Log in with the e-mail address you provided during the creation of the CloudFormation stack and the temporary password sent to you. You will be prompted to enter a new password.
-1. After logging in, you can see your model on the dashboard. Click on `Start the model`.
-<p align="center">
-  <img src="docs/dashboard1.png" alt="Dashboard" />
-</p>
-1. When prompted, enter "1" as the minimum number of inference units to use. Select `Start the model` and then close the popup window.
-1. After a few minutes the model will be running. Try it out by uploading one of the images from the test folder. You can also choose your own image.
+2. Choose `Stacks` from the menu on the left. Then select the "CustomLabelsDemo" stack from the list.
+3. Select the `Output` tab and click on the link which is listed as the value of `url`.
+4. Log in with the e-mail address you provided during the creation of the CloudFormation stack and the temporary password sent to you. You will be prompted to enter a new password.
+5. After logging in, you can see your model on the dashboard. Click on `Start the model`.
+
+![Dashboard](docs/dashboard1.png "Dashboard")
+
+6. When prompted, enter "1" as the minimum number of inference units to use. Select `Start the model` and then close the popup window.
+7. After a few minutes the model will be running. Try it out by uploading one of the images from the test folder. You can also choose your own image.
